@@ -167,20 +167,24 @@ body{
     
     .container__bloques{
         flex-direction: column;
+        overflow: hidden;
         width: 95%;
+        min-height: unset;
     }
     .bloque__vacio{
         width: 100%;
-        min-height: 40rem;
+        min-height: 45rem;
     }
     .bloque__items{
         width: 100%;
-        min-height: 40rem;
+        min-height: auto;
         align-content: center;
         grid-auto-rows: 10rem;
+        padding: 5rem 1rem;
     }
     .bloque__estatico{
-        top: 23%;
+        transition: all .5s;
+        top: 35%;
         left: 50%;
         
     }
