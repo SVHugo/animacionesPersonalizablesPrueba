@@ -124,6 +124,28 @@ body{
 }
 
 
+@media screen and (max-width: 1000px){
+    .container__bloques{
+        flex-direction: column;
+    }
+    .bloque__vacio{
+        width: 100%;
+        height: 40rem;
+    }
+    .bloque__items{
+        width: 100%;
+        height: 40rem;
+        align-content: center;
+        grid-auto-rows: 10rem;
+    }
+    .bloque__estatico{
+        top: 23%;
+        left: 50%;
+        
+    }
+    
+}
+
 /* Css que usare en el javascript*/
 
 .bloque_show_left{
