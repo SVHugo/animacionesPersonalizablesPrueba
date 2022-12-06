@@ -82,13 +82,9 @@ function cajaUno(e) {
     console.log(e.target)
     setTimeout(() => {
         container__bloques.forEach(element => {
-            
             for (let key in objetoClassCss) {
-                /* console.log(element.id == key) */
                 if (element.id == key) {
-                    /* box1.classList.toogle(bloque_show_left) */
                     element.classList.add(objetoClassCss[key])
-                    /* element.style.animation ="rotarLeft .5s ease-out forwards" */
                     if(element.id =="bloque_uno"){
                         element.style.animation ="rotarLeft .5s ease-out forwards"
                     }
@@ -103,16 +99,14 @@ function cajaUno(e) {
         });
     }, 500);
 }
+
 function cajaDos(e) {
     removerClassUno();
     removerClassTres();
 
     setTimeout(() => {
-        
         container__bloques.forEach(element => {
-
             for (let key in objetoClassCssdos) {
-                console.log(element.id == key)
                 if (element.id == key) {
                     /* box1.classList.toogle(bloque_show_left) */
                     element.classList.add(objetoClassCssdos[key]);
@@ -127,16 +121,16 @@ function cajaDos(e) {
 
         });
     }, 500);
-
 }
+
 function cajaTres(e) {
     removerClassDos();
     removerClassUno();
+
     setTimeout(() => {
         container__bloques.forEach(element => {
 
             for (let key in objetoClassCsstres) {
-                console.log(element.id == key)
                 if (element.id == key) {
                     /* box1.classList.toogle(bloque_show_left) */
                     element.classList.add(objetoClassCsstres[key]);
@@ -148,11 +142,11 @@ function cajaTres(e) {
                     }
                 }
             }
-
         });
     }, 500);
 
 }
+
 box1.addEventListener('click', cajaUno)
 box2.addEventListener('click', cajaDos)
 box3.addEventListener('click', cajaTres)

@@ -18,7 +18,22 @@ body{
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: red;
+    flex-direction: column;
+}
+.autor{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    background: rgb(240, 49, 49);
+    border-radius: 25px;
+}
+.autor > h1{
+    font-size: 3rem;
+    font-family: "Kano";
+    text-align: center;
+    padding: 2rem 0rem;
+    color: white;
+    transition: all .5s;
 }
 .container__bloques{
     width: 80%;
@@ -28,17 +43,19 @@ body{
     display: flex;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(145deg, rgb(245, 161, 36), rgb(166, 47, 221));
+    border-radius: 15px;
 }
 .bloque__vacio{
     width: 50%;
     min-height: 100%;
-    background: orange;
+
 }
 .bloque__items{
     padding: 5rem 3rem;
     width: 50%;
     min-height: 100%;
-    background: purple;
+
     display: grid;
     align-content: flex-end;
     grid-auto-rows: 15rem;
@@ -53,7 +70,14 @@ body{
     font-size: 3rem;
     font-family: "Kano";
     border-radius: 15px;
-    box-shadow: 0px 25px 5rem -3rem;
+    box-shadow: 0px 25px 5rem -3rem orange;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.box:hover{
+    transition: all 0.5s;
+    box-shadow: 0px 35px 5rem -2rem orange;
+    transform: scale(1.1);
 }
 .bloque__estatico,
 .bloque__personalizado{
@@ -64,7 +88,7 @@ body{
     left: 25%;
     transform: translate(-50%,-50%);
     width: 200px;
-    background: blue;
+    background: #474747 ;
     height: 300px;
     border-radius: 15px;
     box-shadow: 0px 25px 5rem -3rem;
@@ -74,18 +98,21 @@ body{
     transform: translate(-50%,-50%);
     width: 100px;
     background: var(--bg__primary);
-    margin: 1erem;
+    margin: 1rem;
     height: 100px;
     border-radius: 15px;
     box-shadow: 0px 25px 5rem -3rem;
     
+    
 }
+
 .bloque_left{
     top: 100%;
     left: -300%;   
     transition: all 0.5s;
     
-    /* animation: rotar 1s ease-in-out; */
+}
+.bloque_left:hover{
     
 }
 .bloque_right{
@@ -93,16 +120,27 @@ body{
     left: 900%;
     transition: all 0.5s;
 }
+#box1{
+    background: #212121;
+    color: #ffffff;
+}
+#box2{
+    background: rgb(240, 49, 49);
+    color: #ffffff;
+}
+#box3{
+    background: rgb(8, 226, 117);
+    color: #ffffff;
+}
 #bloque_tres,
 #bloque_cuatro{
-    background: red;
+    background: rgb(240, 49, 49);
 }
 #bloque_cinco,
 #bloque_seis{
-    background: springgreen;
+    background: rgb(8, 226, 117);
     
 }
-
 
 @keyframes rotarLeft {
     0%{
@@ -124,17 +162,19 @@ body{
 }
 
 
+
 @media screen and (max-width: 1000px){
+    
     .container__bloques{
         flex-direction: column;
     }
     .bloque__vacio{
         width: 100%;
-        height: 40rem;
+        min-height: 40rem;
     }
     .bloque__items{
         width: 100%;
-        height: 40rem;
+        min-height: 40rem;
         align-content: center;
         grid-auto-rows: 10rem;
     }
@@ -142,6 +182,10 @@ body{
         top: 23%;
         left: 50%;
         
+    }
+    .autor > h1{
+        transition: all .5s;
+        font-size: 1.8rem;
     }
     
 }
