@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg__primary: #212121;
+    --bg__secondary: #ffffff;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: red;
+}
+.container__bloques{
+    width: 80%;
+    min-height: 80rem;
+    height: auto;
+    
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.bloque__vacio{
+    width: 50%;
+    min-height: 100%;
+    background: orange;
+}
+.bloque__items{
+    padding: 5rem 3rem;
+    width: 50%;
+    min-height: 100%;
+    background: purple;
+    display: grid;
+    align-content: flex-end;
+    grid-auto-rows: 15rem;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    font-size: 3rem;
+    font-family: "Kano";
+    border-radius: 15px;
+    box-shadow: 0px 25px 5rem -3rem;
+}
+.bloque__estatico,
+.bloque__personalizado{
+    position: absolute;
+}
+.bloque__estatico{
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    background: blue;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 5rem -3rem;
+}
+.bloque__personalizado{
+    
+    transform: translate(-50%,-50%);
+    width: 100px;
+    background: var(--bg__primary);
+    margin: 1erem;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 5rem -3rem;
+    
+}
+.bloque_left{
+    top: 100%;
+    left: -300%;   
+    transition: all 0.5s;
+    
+    /* animation: rotar 1s ease-in-out; */
+    
+}
+.bloque_right{
+    top: 100%;
+    left: 900%;
+    transition: all 0.5s;
+}
+#bloque_tres,
+#bloque_cuatro{
+    background: red;
+}
+#bloque_cinco,
+#bloque_seis{
+    background: springgreen;
+    
+}
+
+
+@keyframes rotarLeft {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(720deg);
+    }
+
+}
+@keyframes rotarRigt {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(-720deg);
+    }
+
+}
+
+
+/* Css que usare en el javascript*/
+
+.bloque_show_left{
+    left: 0%;
+    transition: all 0.5s;
+}
+.bloque_show_right{
+    left: 100%;
+    transition: all 0.5s;
+}
